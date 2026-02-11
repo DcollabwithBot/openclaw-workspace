@@ -32,9 +32,10 @@ Format:
 
 ### 3. Todoist Reconciliation (every 2 hours)
 - Run: `~/.openclaw/workspace/skills/todoist/todoist.sh reconcile`
-- Check for stalled tasks (>24h old in Active)
-- Check for tasks assigned to user (blocked/waiting)
-- Report if action needed, otherwise silent
+- Check for stalled tasks (>24h old, not in 🟢 Done)
+- Check for tasks in 🟠 Waiting
+- Report counts per state (🟡🔵🟠🟣)
+- Alert if stalled or waiting tasks found
 - Last check: read `lastChecks.todoist` from state
 
 ### 4. Brave Search Quota (every 6 hours)
