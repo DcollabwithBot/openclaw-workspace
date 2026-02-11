@@ -144,3 +144,31 @@ fi
 echo "$RESPONSE" | jq -r '.result.data // .result'
 
 exit 0
+
+# Node.js Restart Function (call separately)
+# Usage: cpanel_restart_nodejs <app_path>
+# Example: cpanel_restart_nodejs /home/username/api.tjekbolig.ai
+cpanel_restart_nodejs() {
+    local APP_PATH="${1:-}"
+    local SSH_KEY="${CPANEL_SSH_KEY:-$HOME/.ssh/openclaw_nordicway_ed25519}"
+    local SSH_HOST="${CPANEL_SSH_HOST:-$(cat "$HOST_FILE" 2>/dev/null | tr -d '[:space:]')}"
+    local SSH_PORT="${CPANEL_SSH_PORT:-33}"
+    local SSH_USER="${CPANEL_SSH_USER:-$USERNAME}"
+    
+    if [[ -z "$APP_PATH" ]]; then
+        error "Usage: cpanel_restart_nodejs <app_path>"
+    fi
+    
+    if [[ -z "$SSH_HOST" ]]; then
+        error "SSH_HOST not set. Set CPANEL_SSH_HOST or ensure host file exists"
+    fi
+    
+    # Create tmp directory if not exists and touch restart.txt
+    ssh -i "$SSH_KEY" -p "$SSH_PORT" -o StrictHostKeyChecking=no \
+        "${SSH_USER}@${SSH_HOST}" \
+        "mkdir -p '${APP_PATH}/tmp' && touch '${APP_PATH}/tmp/restart.txt' && echo 'Restart triggered'" \
+        2>/dev/null || error "Failed to restart app. Check SSH access."
+    
+    success "✅ Node.js app restart triggered at ${APP_PATH}"
+    echo "   The app will restart on next request to https://${SSH_HOST}/"
+}

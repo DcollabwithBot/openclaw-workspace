@@ -170,6 +170,7 @@ Common UAPI modules (see `references/uapi-modules.md` for full list):
 | DomainInfo | Domain data | list_domains, main_domain |
 | ServerInformation | System info | get_server_information |
 | LangPHP | PHP config | php_get_installed_versions |
+| **PassengerApps** | **Node.js/Ruby/Python apps** | **list_applications, register_application, ensure_deps** |
 
 ## Real-World Example: Check Python Version
 
@@ -208,6 +209,146 @@ echo "$RESPONSE" | jq '.result.data'
 - **Rate limits** - API calls may be throttled
 - **Module availability** - Some modules require specific cPanel features
 
+## Node.js Application Management (PassengerApps)
+
+cPanel uses **Phusion Passenger** to manage Node.js, Ruby, and Python applications via the `PassengerApps` UAPI module.
+
+### List Applications
+
+```bash
+./scripts/cpanel.sh PassengerApps list_applications
+```
+
+**Response:**
+```json
+{
+  "app_name": {
+    "base_uri": "/",
+    "deployment_mode": "production",
+    "domain": "api.tjekbolig.ai",
+    "enabled": 1,
+    "name": "tjekbolig-backend",
+    "path": "/home/username/api.tjekbolig.ai"
+  }
+}
+```
+
+### Register New Application
+
+```bash
+./scripts/cpanel.sh PassengerApps register_application \
+  name='my-node-app' \
+  path='/home/username/myapp' \
+  domain='api.example.com' \
+  deployment_mode=production \
+  enabled=1
+```
+
+**Parameters:**
+- `name` - Application name (1-50 chars)
+- `path` - Full path to app directory (relative to home)
+- `domain` - Domain/subdomain for the app
+- `deployment_mode` - `production` or `development`
+- `enabled` - `1` to enable, `0` to disable
+
+### Install Dependencies
+
+```bash
+# Install npm packages
+./scripts/cpanel.sh PassengerApps ensure_deps \
+  type=npm \
+  app_path='/home/username/api.tjekbolig.ai/'
+
+# Install Python packages
+./scripts/cpanel.sh PassengerApps ensure_deps \
+  type=pip \
+  app_path='/home/username/myapp/'
+
+# Install Ruby gems
+./scripts/cpanel.sh PassengerApps ensure_deps \
+  type=gem \
+  app_path='/home/username/rubyapp/'
+```
+
+### 🔄 Restart Application
+
+**Method 1: Via restart.txt (Recommended)**
+
+cPanel/Passenger checks for `tmp/restart.txt` file. Touch it to trigger restart:
+
+```bash
+# SSH to server and touch restart file
+ssh -p 33 user@cp05.nordicway.dk "touch ~/api.tjekbolig.ai/tmp/restart.txt"
+```
+
+**Requirements:**
+- Must have `tmp/` directory in app root
+- File can be empty - Passenger only checks timestamp
+- Happens automatically on next request
+
+**Method 2: Via script helper**
+
+Add to `scripts/cpanel.sh`:
+
+```bash
+# Restart Node.js app via SSH
+cpanel_restart_nodejs() {
+  local app_path="$1"
+  ssh -i "$SSH_KEY" -p "$SSH_PORT" "${SSH_USER}@${SSH_HOST}" \
+    "mkdir -p ${app_path}/tmp && touch ${app_path}/tmp/restart.txt" \
+    && echo "✅ App restart triggered (will happen on next request)"
+}
+```
+
+**Usage:**
+```bash
+# Restart api.tjekbolig.ai app
+cpanel_restart_nodejs /home/username/api.tjekbolig.ai
+```
+
+### Application Structure Requirements
+
+Node.js apps must have:
+
+```
+api.tjekbolig.ai/
+├── app.js or server.js     # Entry point (default: app.js)
+├── package.json            # Dependencies
+├── .env                    # Environment variables
+├── tmp/                    # REQUIRED for restart.txt
+│   └── restart.txt         # Touch to restart
+└── node_modules/           # Symlink to virtualenv (created by cPanel)
+```
+
+**Note:** `node_modules` should be a symlink to CloudLinux virtualenv, not a regular folder.
+
+### Complete Node.js Deployment Workflow
+
+```bash
+# 1. Upload application files
+scp -r -P 33 ./myapp/* user@host:~/api.example.com/
+
+# 2. Create tmp directory for restart
+ssh -p 33 user@host "mkdir -p ~/api.example.com/tmp"
+
+# 3. Register app in cPanel (if not already)
+./scripts/cpanel.sh PassengerApps register_application \
+  name='my-api' \
+  path='/home/user/api.example.com' \
+  domain='api.example.com'
+
+# 4. Install dependencies via cPanel API
+./scripts/cpanel.sh PassengerApps ensure_deps \
+  type=npm \
+  app_path='/home/user/api.example.com/'
+
+# 5. Restart application
+ssh -p 33 user@host "touch ~/api.example.com/tmp/restart.txt"
+
+# 6. Test health endpoint
+curl https://api.example.com/health
+```
+
 ## Deployment Considerations
 
 If Python version is too old (like 3.6):
@@ -215,6 +356,7 @@ If Python version is too old (like 3.6):
 2. **External backend** - Host Python/FastAPI elsewhere (Heroku, Railway, Fly.io)
 3. **PHP alternative** - Rewrite backend in PHP (widely supported)
 4. **Contact host** - Ask if they offer newer Python via CloudLinux Python Selector
+5. **Use Node.js instead** - cPanel supports modern Node.js versions (16, 18, 20, 22) via Passenger
 
 ## Troubleshooting
 
@@ -244,6 +386,7 @@ If Python version is too old (like 3.6):
 
 - `references/uapi-modules.md` - Full UAPI module list
 - `references/cpanel-api-examples.md` - More curl examples
+- `references/passengerapps.md` - Node.js/Ruby/Python app management
 - `scripts/cpanel.sh` - Main script for API calls
 
 ## External Links
