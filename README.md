@@ -1,2 +1,7 @@
-# openclaw-workspace
-OpenClaw bot workspace and projects
+# OpenClaw Workspace
+
+This repository contains OpenClaw bot workspace and configuration.
+
+Created: 2026-02-11
+Bot: dspammails-rgb
+
