@@ -102,26 +102,29 @@ The skill uses the `browser` tool to:
 
 ## Setup Requirements
 
-### Option 1: Chrome Extension (Recommended for Development)
+### Option 1: Headless Playwright (Recommended - Works on Server)
+Already installed! Uses Chromium headless browser directly.
+
+```bash
+# Run full E2E test with screenshots
+node scripts/frontend-test-playwright.js https://tjekbolig.ai
+
+# Results saved to /tmp/frontend-test-results/
+# Includes: screenshots, test-results.json, console logs
+```
+
+### Option 2: Chrome Extension (For Development)
 1. Install Chrome extension: [OpenClaw Browser Relay](https://chromewebstore.google.com/detail/openclaw-browser-relay/ahjdmconkfkbbmlaoakkpclmgdmemmah)
 2. Open site you want to test
 3. Click extension icon to attach tab
 4. Run `browser` commands
 
-### Option 2: Standalone Browser (For CI/Server)
+### Option 3: API + Manual Checklist
 ```bash
-# Install Playwright
-npm install -g playwright
-npx playwright install chromium
+# Quick API health check
+./scripts/frontend-test.sh https://tjekbolig.ai
 
-# Run tests
-./scripts/frontend-test.sh --mode=playwright
-```
-
-### Option 3: Manual Testing Checklist
-When browser automation isn't available, use the manual checklist:
-```bash
-./scripts/frontend-test.sh https://tjekbolig.ai --mode=manual
+# Manual testing checklist included
 ```
 
 ## Testing TjekBoligAI
