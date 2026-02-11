@@ -37,6 +37,13 @@ Format:
 - Report if action needed, otherwise silent
 - Last check: read `lastChecks.todoist` from state
 
+### 4. Brave Search Quota (every 6 hours)
+- Run: `~/.openclaw/workspace/skills/check-quotas/check-quotas.sh | jq '.brave_search'`
+- Alert if: usage >= 1.950 (97.5%) or near_limit = true
+- Auto-switches to Perplexity at 1.990 (99.5%)
+- Monthly reset: 1st of month via cron
+- Last check: read `lastChecks.brave_quota` from state
+
 ## Quiet Hours
 - Late night (23:00-08:00 UTC+1) → only urgent items
 - Respect if user is clearly busy

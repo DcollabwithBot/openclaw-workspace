@@ -1,0 +1,9 @@
+{
+  "brave": {
+    "monthlyLimit": 2000,
+    "warningThreshold": 1990,
+    "currentMonth": "2026-02",
+    "requestCount": 1,
+    "lastUpdated": "2026-02-11T12:54:00Z"
+  }
+}

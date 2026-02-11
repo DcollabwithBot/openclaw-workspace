@@ -95,12 +95,53 @@ check_todoist() {
         jq -r 'if type == "array" then "valid" else "error" end' || echo "null"
 }
 
+# Check Brave Search quota
+check_brave() {
+    local usage_file="$HOME/.openclaw/workspace/memory/brave-usage.json"
+    
+    if [ ! -f "$usage_file" ]; then
+        echo '{"status": "not_initialized", "used": 0, "remaining": 2000, "limit": 2000}'
+        return
+    fi
+    
+    # Check if we need monthly reset
+    local current_month=$(date +%Y-%m)
+    local file_month=$(jq -r '.brave.currentMonth' "$usage_file" 2>/dev/null || echo "none")
+    
+    if [[ "$current_month" != "$file_month" ]]; then
+        # Reset for new month
+        echo "{
+  \"brave\": {
+    \"monthlyLimit\": 2000,
+    \"warningThreshold\": 1990,
+    \"currentMonth\": \"$current_month\",
+    \"requestCount\": 0,
+    \"lastUpdated\": \"$(date -Iseconds)Z\"
+  }
+}" > "$usage_file"
+        file_month="$current_month"
+    fi
+    
+    jq '{
+        status: "active",
+        current_month: .brave.currentMonth,
+        used: .brave.requestCount,
+        remaining: (2000 - .brave.requestCount),
+        limit: 2000,
+        percentage: ((.brave.requestCount / 2000) * 100 | floor),
+        warning_threshold: .brave.warningThreshold,
+        near_limit: (.brave.requestCount >= .brave.warningThreshold),
+        last_updated: .brave.lastUpdated
+    }' "$usage_file" 2>/dev/null || echo '{"status": "error", "used": 0, "remaining": 2000}'
+}
+
 # Build combined JSON output
 openrouter_quota=$(check_openrouter)
 openai_status=$(check_openai)
 anthropic_status=$(check_anthropic)
 github_quota=$(check_github)
 todoist_status=$(check_todoist)
+brave_quota=$(check_brave)
 
 jq -n \
     --argjson openrouter "$openrouter_quota" \
@@ -108,11 +149,13 @@ jq -n \
     --arg anthropic "$anthropic_status" \
     --argjson github "$github_quota" \
     --arg todoist "$todoist_status" \
+    --argjson brave "$brave_quota" \
     '{
         openrouter: $openrouter,
         openai_api: $openai,
         anthropic_api: $anthropic,
         github: $github,
         todoist: $todoist,
+        brave_search: $brave,
         checked_at: (now | strftime("%Y-%m-%dT%H:%M:%SZ"))
     }'
