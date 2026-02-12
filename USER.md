@@ -20,37 +20,52 @@
 ## Hus
 
 **Ejendom:**
-- Bygget: 1921
+- Lokation: Store Heddinge
+- Bygget: 1921 (tilhørte Kirstines mormor og morfar)
 - Størrelse: 220 kvm + 140+ kvm værkstedsbygning
-- Status: Under gennemrenovering
+- Status: Totalrenoveret (Danny & Kirstine sammen)
 - Nyt tag: 2016
 - Ny 12kW varmepumpe: 2025
 - God skalmuret stand
 
-**Projekter:** Gennemrenovering af ældre hus, energioptimering, automation (Shelly/ESPHome)
+**Næste projekter:** Bryggers og badeværelse
+
+**Tech projekter:** Energioptimering, home automation (Shelly/ESPHome)
 
 ## Professionelt
 
 **Nuværende rolle:**  
 Seniorkonsulent / Techlead hos **NetIP** (2025-)
 
-**Tidligere:**  
-Konsulent & CTO hos **Infrateam** (2016-2025, opkøbt af NetIP)
+**Karrierehistorie:**
+- **Infrateam (2016-2025):** Startede som konsulent, blev Partner & CTO efter 5 år (sammen med Rasmus, overtog fra Jeppe)
+- **Opkøb:** Infrateam solgt til NetIP (2025) - kulturmatch var afgørende
+- **Motivation for salg:** Sværere at tiltrække nye folk og kunder som lille virksomhed
+- **Efter opkøb:** Gik fra CTO til seniorkonsulent (ingen medarbejderansvar mere), men fik adgang til 250+ kolleger og større projekter
 
-**Ansvar:**
+**Nuværende ansvar:**
 - AI-gruppen
-- Servicegruppen
+- Servicegruppen  
 - Pre-sales og rådgivning
 - Salg & projektledelse
-- **IKKE** medarbejderansvar længere
+- Tech lead rolle (arkitektur, nye tiltag)
 
 **Kompetencer:**
-- Enterprise IT: M365, Entra ID, Intune, sikkerhed
-- Compliance: NIS2, suverænitet
-- Hands-on: PowerShell, Python, Shell, YAML, CI/CD
-- Automation: Ansible, Puppet
-- Infrastruktur: VMware, Proxmox, netværk
-- Meget praktisk - bygger og tester selv
+- **Enterprise IT:** M365, Entra ID, Intune, sikkerhed, netværk
+- **Compliance:** NIS2, suverænitet, cybersecurity (stor interesse)
+- **Hands-on:** PowerShell, Python, Shell, YAML, CI/CD
+- **Automation:** Ansible, Puppet - "work smarter, not harder"
+- **Infrastruktur:** VMware, Proxmox, virtualisering
+- **Cloud:** Microsoft Azure, AWS
+- **OS:** Windows, Linux, open-source fokus
+- **Programmering:** Baggrund i kodning, laver automatiseringsløsninger
+
+**Filosofi:**
+- "Work smarter, not harder"
+- Identificer gentagne opgaver → automatiser
+- Reducer menneskelige fejl via automation
+- Find den rigtige løsning første gang (ikke quick fixes)
+- Forståelse for både teknologi og forretningsbehov
 
 ## Personlighed & Værdier
 
@@ -68,13 +83,20 @@ Konsulent & CTO hos **Infrateam** (2016-2025, opkøbt af NetIP)
 - Økonomisk jyde (vil have value for money, men køber når nødvendigt)
 
 **Fritid:**
-1. Familie (børn & kone) - højeste prioritet
-2. Renovering af hus
-3. Motion: løb og styrketræning
-4. Venner (næst efter familie)
-5. Tech-projekter
+1. **Familie** (børn & kone) - højeste prioritet
+2. **Renovering af hus** - stort igangværende projekt
+3. **Motion:** Løb og styrketræning (aktiv livsstil)
+4. **Madlavning:** Madnørd - laver hjemmelavet is, drinks, mad til kolleger
+5. **Rejser:** Både skiferie og solferie
+   - Besøgt 21 lande
+   - Thailand: Koh Samui, Phi Phi øerne, bungalow i Bangkok, naturreservat med aber
+6. **Venner** (næst efter familie)
+7. **Tech-projekter**
 
-**Stil:** Går op i detaljer (fx parfumevalg)
+**Stil:** 
+- Går op i detaljer (fx parfumevalg)
+- Forkæler kolleger med hjemmelavet mad og drinks
+- Rejseerfaring - har gode rejsetips
 
 ## Arbejdsflow
 
@@ -84,9 +106,28 @@ Konsulent & CTO hos **Infrateam** (2016-2025, opkøbt af NetIP)
 - Forventer præcision
 - Systemisk tænkning - optimerer både digitalt og fysisk
 
+## Værdier fra opkøb/transition
+
+**Fra Infrateam til NetIP:**
+- Kulturmatch var afgørende - værdier og åbenhed stemte overens
+- Åbenhed og fladt hierarki vigtig for trivsel
+- Værdsætter adgang til større kompetencer og netværk
+- "Vi står stærkere som team" efter opkøbet
+- Processen håndteret professionelt og ærligt
+
+**Arbejdsfilosofi:**
+- Fokus på langsigtet løsninger (ikke quick fixes)
+- Blive ved projektet til det virker som tiltænkt
+- Kombinere teknisk viden med forretningsforståelse
+- Teamsamarbejde vigtigt
+- Værdsætter faglighed og professionel håndtering
+
 ## Notes
 
 - Jyde: synes ting bør være billigere end de er, men pragmatisk
 - Bygger selv løsninger - både i datacenter og derhjemme
 - Kontrol over stacken er vigtigt
 - Familiefar med 2 små børn - tidspres kan være en faktor
+- Kontor: Faxe (NetIP)
+- Forkæler kolleger med mad - social og omsorgsfuld
+- Rejseglade familie - har besøgt mange destinationer
