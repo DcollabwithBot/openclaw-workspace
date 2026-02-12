@@ -21,10 +21,17 @@
 
 ### Nuværende hus (købt 1. juli 2025)
 - **Lokation:** Store Heddinge
-- **Størrelse:** 220 kvm
+- **Størrelse:** 220 kvm + værkstedsbygning
 - **Status:** Købt 1. juli 2025, skal renoveres fra forår 2026
 - **Plan:** Selv i arbejdstøj når frosten forsvinder (forår 2026)
 - **Periode med 2 huse:** Juli 2025 - Januar 2026 (6 måneder)
+
+**Renoveringsplan (samme omfang som gamle hus):**
+- **Alt indvendigt:** Fuld forskaling, ekstra isolering i vægge, gulvvarme, nye vægge, nye lofter, nye vinduer
+- **Start:** Værkstedsbygning
+  - Nedre etage: Gildesal
+  - Øvre etage: 2 værelser med loft til kip (tagetage)
+- **Huset:** Sundt, men skal møde moderne standarder
 
 ### Tidligere hus (solgt 2. januar 2026)
 - **Lokation:** Store Heddinge
@@ -32,6 +39,11 @@
 - **Størrelse:** 220 kvm + 140+ kvm værkstedsbygning
 - **Status:** Totalrenoveret og solgt 2. januar 2026
 - **Forbedringer:**
+  - Fuld forskaling
+  - Ekstra isolering i vægge
+  - Gulvvarme
+  - Nye vægge og lofter
+  - Nye vinduer
   - Nyt tag: 2016
   - Ny 12kW varmepumpe: 2025
   - God skalmuret stand
