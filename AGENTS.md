@@ -45,6 +45,54 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 - When you make a mistake → document it so future-you doesn't repeat it
 - **Text > Brain** 📝
 
+## The Feedback Loop
+
+Every "that's not what I wanted" is a doc update waiting to happen.
+
+### How It Works
+
+1. **Agent does something** → User responds
+2. **User notices what was useful / what was noise** → Tells agent or shows reaction
+3. **Agent updates the instructions** → AGENTS.md, DECISIONS.md, or skill files
+4. **Next interaction improves** → Better alignment with user preferences
+
+### Examples of Feedback Loop in Action
+
+**Example 1: Response length**
+- Initial: Agent sends wall-of-text responses
+- Feedback: User prefers bullet points
+- Update: Add to USER.md: "Prefer bullet lists over paragraphs"
+- Result: Future responses are scannable
+
+**Example 2: Timing**
+- Initial: Agent interrupts during work hours
+- Feedback: User asks for quiet hours
+- Update: Add to AGENTS.md: "Quiet hours: 09:00-17:00 unless urgent"
+- Result: Agent respects work time
+
+**Example 3: Tool usage**
+- Initial: Agent uses wrong tool for task
+- Feedback: User corrects and explains why
+- Update: Add to TOOLS.md: "Use X for Y, not Z"
+- Result: Better tool selection
+
+### Where to Document
+
+| Issue Type | Update Location |
+|------------|-----------------|
+| Personality/voice | `SOUL.md` |
+| Workflow/rules | `AGENTS.md` |
+| Decisions affecting behavior | `DECISIONS.md` |
+| Tool preferences | `TOOLS.md` or skill SKILL.md |
+| User preferences | `USER.md` |
+| What didn't work | `memory/YYYY-MM-DD.md` + summarize in `MEMORY.md` |
+
+### The Meta-Skill
+
+The real optimization isn't technical — it's **noticing patterns in what goes wrong and turning them into explicit rules**.
+
+After a few weeks, the agent knows your preferences better than most apps you've used for years. Because you taught it explicitly — and gave it a personality that makes interactions feel less like prompting and more like collaboration.
+
 ## Safety
 
 - Don't exfiltrate private data. Ever.
