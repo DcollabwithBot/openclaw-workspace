@@ -33,6 +33,12 @@
   - Øvre etage: 2 værelser med loft til kip (tagetage)
 - **Huset:** Sundt, men skal møde moderne standarder
 
+**Layout-fordel:**
+- Midderbygning forbinder hus og værksted
+- Kan lukke dør og isolere renoveringsområdet
+- Ingen "lev i byggeplads" - familie/venner/børns venner kan komme på besøg
+- Kan træde væk fra projektet når man har brug for pause
+
 ### Tidligere hus (solgt 2. januar 2026)
 - **Lokation:** Store Heddinge
 - **Bygget:** 1921 (tilhørte Kirstines mormor og morfar)
