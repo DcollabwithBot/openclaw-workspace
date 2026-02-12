@@ -17,16 +17,24 @@
 - **Sigurd** - 4 år (født 14. jan 2022)
 - **Vilma** - 6 år (født 26. aug 2019)
 
-## Hus (Solgt 2. januar 2026)
+## Huse
 
-**Tidligere ejendom:**
-- Lokation: Store Heddinge
-- Bygget: 1921 (tilhørte Kirstines mormor og morfar)
-- Størrelse: 220 kvm + 140+ kvm værkstedsbygning
-- Status: Totalrenoveret (Danny & Kirstine sammen) og solgt
-- Nyt tag: 2016
-- Ny 12kW varmepumpe: 2025
-- God skalmuret stand
+### Nuværende hus (købt 1. juli 2025)
+- **Lokation:** Store Heddinge
+- **Størrelse:** 220 kvm
+- **Status:** Købt 1. juli 2025, skal renoveres fra forår 2026
+- **Plan:** Selv i arbejdstøj når frosten forsvinder (forår 2026)
+- **Periode med 2 huse:** Juli 2025 - Januar 2026 (6 måneder)
+
+### Tidligere hus (solgt 2. januar 2026)
+- **Lokation:** Store Heddinge
+- **Bygget:** 1921 (tilhørte Kirstines mormor og morfar)
+- **Størrelse:** 220 kvm + 140+ kvm værkstedsbygning
+- **Status:** Totalrenoveret og solgt 2. januar 2026
+- **Forbedringer:**
+  - Nyt tag: 2016
+  - Ny 12kW varmepumpe: 2025
+  - God skalmuret stand
 
 **Badeværelse-projekt (færdiggjort før salg):**
 - Gravede selv ud
@@ -37,7 +45,7 @@
 - Nyt gipsloft
 - **Konklusion:** Hænderne er fornuftigt skruet på! 💪
 
-**Tech projekter i huset:**
+**Tech projekter:**
 - Energioptimering
 - Home automation (Shelly/ESPHome)
 
