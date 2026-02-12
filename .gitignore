@@ -1,0 +1,41 @@
+# Credentials and secrets
+credentials/
+*.env
+.env.*
+
+# Node modules
+node_modules/
+**/node_modules/
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Git submodules (projects with their own repos)
+projects/*/
+!projects/*/.gitkeep
+
+# Memory state (sensitive/ephemeral)
+memory/heartbeat-state.json
+
+# Workspace subdirs (separate repos)
+workspace/repos/
