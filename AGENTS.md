@@ -294,8 +294,16 @@ The github.com/openclaw/skills community repo has 100+ malicious skills using na
 **SAFE PRACTICES:**
 - ✅ Create custom skills in `workspace/skills/` (we do this)
 - ✅ Git-track all skills for review
-- ✅ If you MUST use external skill: git clone + manual copy from specific author directory
-- ✅ Verify SKILL.md file sizes (malicious ones are ~2x larger)
+- ✅ If you MUST use external skill:
+  1. `git clone` from specific author's repo
+  2. Manual copy from author's directory (NOT community repo)
+  3. **SCAN med git-security skill før brug:**
+     ```bash
+     cd /path/to/external-skill
+     ~/.openclaw/workspace/skills/git-security/scripts/scan.sh
+     ```
+  4. Verify SKILL.md file sizes (malicious ~2x larger)
+  5. Review code manually før installation
 
 **Regular checks:**
 ```bash
