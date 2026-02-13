@@ -617,3 +617,42 @@ Alle implementerings-agenter SKAL rapportere kode-lokation:
 ## Make It Yours
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
+
+## Project Documentation Standard (MANDATORY)
+
+**Hver projekt SKAL have `projects/[projekt]/PROJECT.md` med:**
+
+### Indhold:
+1. **Deployment info** (SSH, paths, URLs, deploy kommandoer)
+2. **API Keys tracking** (service, purpose, rotation dates)
+3. **Stack beskrivelse** (frameworks, versions)
+4. **Environment variables** (navne, ikke værdier)
+5. **Deploy checklist**
+
+### Sikkerhed:
+- `PROJECT.md` er .gitignored (aldrig commit)
+- Kun i workspace (ikke public repos)
+- Fulde keys ALDRIG i PROJECT.md - brug .env eller password manager
+- Opdateres når credentials roteres
+
+### Credential Rotation:
+- **Alle API keys får dato ved modtagelse**
+- **Næste rotation = dato + 90 dage**
+- **Bent (security) tjekker månedligt** for keys der skal roteres
+- **Alert til Danny 2 uger før rotation deadline**
+
+### Template:
+Brug `/root/.openclaw/workspace/templates/PROJECT.md.template`
+
+### Onboarding:
+Når nyt projekt startes → orchestrator (Rene) opretter PROJECT.md fra template.
+
+### Eksempel struktur:
+```
+projects/
+  tjekbolig-ai/
+    PROJECT.md (gitignored - credentials her)
+    README.md (public - ingen credentials)
+    frontend/
+    backend/
+```
