@@ -69,8 +69,12 @@
 
 ## Professionelt
 
-**Nuværende rolle:**  
-Seniorkonsulent / Techlead hos **NetIP** (2025-)
+**Nuværende roller:**  
+- Seniorkonsulent / Techlead hos **NetIP** (2025-)
+- **Selvstændig (sidebiz):** Hjælper primært 2 kunder (ældre mennesker)
+  - Lommepenge + hyggeligt
+  - Ingen større ambitioner pt.
+  - Tanke: Hvis trading stikker af → profit til selvstændigt selskab → udbytte/løn
 
 **Karrierehistorie:**
 - **Infrateam (2016-2025):** Startede som konsulent, blev Partner & CTO efter 5 år (sammen med Rasmus, overtog fra Jeppe)
@@ -104,6 +108,23 @@ Seniorkonsulent / Techlead hos **NetIP** (2025-)
 
 ## Personlighed & Værdier
 
+**ADHD & Arbejdsstil:**
+- Selvdiagnosticeret ADHD - "popcorn hjerne"
+- Fuld af gode ideer og ting han gerne vil
+- Kan drifte/afvige fra samtaler og begynde at tænke på andre ting
+- **Personlighedsprofil** (ref. "Dealing with Idiots"): Gul med strejf af rød og grøn
+- **Mantra:** Pippi Langstrømpe - "det har jeg aldrig prøvet før - det kan jeg sikkert godt"
+- **Foretrukken opgavestruktur:** Forskellige opgaver dag til dag (trives i variation)
+- **Udfordring:** Langvarige ensformige opgaver (dokumentation, tilbud, arkitektur design) → taber gnisten
+- **Styrke:** God til at effektuere på ting
+- **Svaghed:** Kan mangle de sidste 10% fordi han er videre til næste
+- **Tidspres:** Vil det hele, men har ikke 48 timer i et døgn
+
+**Kommunikationsstil:**
+- Direkte uden mange tillægsord
+- "En spade er en spade og en skovl er en skovl"
+- Ingen omsvøb - lige på og hårdt
+
 **Drevet af:**
 - Effektivitet og kontrol
 - Langsigtet bæredygtighed
@@ -117,16 +138,21 @@ Seniorkonsulent / Techlead hos **NetIP** (2025-)
 - Går op i detaljer
 - Økonomisk jyde (vil have value for money, men køber når nødvendigt)
 
-**Fritid:**
+**Fritid & Sideprojekter:**
 1. **Familie** (børn & kone) - højeste prioritet
 2. **Renovering/byggeri:** Tidligere totalrenovering af 1921-hus (solgt jan 2026), meget hands-on
-3. **Motion:** Løb og styrketræning (aktiv livsstil)
-4. **Madlavning:** Madnørd - laver hjemmelavet is, drinks, mad til kolleger
-5. **Rejser:** Både skiferie og solferie
+   - **Instagram:** @SlottetPaaMollegade - dokumenterer renovering af nuværende hus
+3. **Forex Trading:** 
+   - Strategi: ORB (Opening Range Breakout) på 5min & 15min ved US Open
+   - God succesrate
+   - Filosofi: "Jo mere du komplicerer din trading, jo sværere bliver det og jo mindre holder du dig til reglerne og fornuften"
+4. **Motion:** Løb og styrketræning (aktiv livsstil)
+5. **Madlavning:** Madnørd - laver hjemmelavet is, drinks, mad til kolleger
+6. **Rejser:** Både skiferie og solferie
    - Besøgt 21 lande
    - Thailand: Koh Samui, Phi Phi øerne, bungalow i Bangkok, naturreservat med aber
-6. **Venner** (næst efter familie)
-7. **Tech-projekter**
+7. **Venner** (næst efter familie)
+8. **Tech-projekter**
 
 **Stil:** 
 - Går op i detaljer (fx parfumevalg)
