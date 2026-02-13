@@ -413,6 +413,46 @@ To control which agents can spawn other agents, use `subagents.allowAgents` on *
 | orchestrator | Sonnet 4.5 | CLI/tool management | monitor, researcher |
 | coordinator | Opus 4.6 | Complex planning | monitor, researcher, communicator, orchestrator |
 
+## Config Validation Workflow
+
+Når config skal ændres (OBLIGATORISK):
+
+1. **Design ændringen** - Specificer præcist hvad der skal tilføjes/ændres
+2. **Verificer schema** - Tjek OpenClaw docs for gyldige felter
+3. **Brug jq til MERGE** - Aldrig `config.patch` med hele sections
+4. **Test med doctor** - Kør `openclaw doctor` INDEN gateway restart
+5. **Hvis fejl** - Fix med `openclaw doctor --fix`
+6. **Derefter** - Restart gateway
+
+**Gyldige agent felter:**
+- ✅ `id`, `name`, `workspace`, `model`, `tools`, `subagents`, `default`
+- ❌ `description` (ikke supporteret - brug kommentarer i AGENTS.md i stedet)
+
+**Eksempel - korrekt agent tilføjelse:**
+```bash
+# Læs eksisterende agents
+existing=$(cat ~/.openclaw/openclaw.json | jq '.agents.list')
+
+# Tilføj ny agent
+new_agent='{"id":"newagent","name":"NewAgent","tools":{"allow":["read"]}}'
+
+# Merge og gem
+jq ".agents.list += [$new_agent]" ~/.openclaw/openclaw.json > /tmp/config.json
+mv /tmp/config.json ~/.openclaw/openclaw.json
+
+# Validér
+openclaw doctor
+
+# Restart hvis OK
+pkill -USR1 -f "openclaw gateway"
+```
+
+**Lessons learned:**
+- config.patch ERSTATTER sections → brug kun til single keys
+- jq er den sikre måde at MERGE på
+- Validér altid med doctor før restart
+- Git backup redder dig når det går galt
+
 ## Make It Yours
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
