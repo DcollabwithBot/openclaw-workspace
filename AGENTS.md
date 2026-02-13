@@ -523,6 +523,42 @@ git push origin main
 - ✅ Kode ændringer (scripts, skills)
 - ✅ Security policies
 - ✅ Alt der påvirker system behaviour
+## Kode-Lokalitetsstandard (MANDATORY)
+
+Alle implementerings-agenter SKAL rapportere kode-lokation:
+
+### Før implementation:
+1. Check `workspace/projects/` for eksisterende struktur
+2. Verificér at sti følger mønster: `workspace/projects/[projekt]/`
+
+### Efter implementation:
+1. Skriv til `memory/YYYY-MM-DD.md`:
+   ```markdown
+   ## [HH:MM] Kode-landet: [projekt-navn]
+   - Location: `workspace/projects/[projekt]/[fil]`
+   - Git repo: `[repo URL]`
+   - Commit: `[hash]`
+   - Agent: [agent-id]
+   - Status: ✅ Implementeret
+   ```
+
+2. Returnér til parent agent:
+   ```
+   "Kode implementeret i: workspace/projects/[projekt]/[sti]"
+   "Git commit: [hash]"
+   ```
+
+### Hvis koden IKKE er der hvor den forventes:
+→ Eskaler til main med fuld sti
+
+## Spawn Permissions Matrix
+
+| Spawner \ Spawnee | monitor | researcher | communicator | reviewer | coordinator | orchestrator | verifier | security | complexity-guardian |
+|-------------------|---------|------------|--------------|----------|-------------|--------------|----------|----------|---------------------|
+| **main**          | ✅      | ✅         | ✅           | ✅       | ✅          | ✅           | ❌       | ✅       | ❌                  |
+| **coordinator**   | ✅      | ✅         | ✅           | ✅       | ❌          | ✅           | ✅       | ✅       | ✅                  |
+| **orchestrator**  | ✅      | ✅         | ✅           | ✅       | ❌          | ❌           | ✅       | ✅       | ❌                  |
+
 ## Make It Yours
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
