@@ -1,0 +1,99 @@
+# [Project Name] - Project Info
+
+**Oprettet:** YYYY-MM-DD
+**Sidst opdateret:** YYYY-MM-DD
+
+## Deployment (PRIVAT - ikke git)
+
+### Hosting Provider: [navn]
+**SSH:**
+- Host: [hostname eller IP]
+- User: [username]
+- Port: [port, standard 22]
+- Key: ~/.ssh/[keyname]
+- Path: /home/[user]/[project-path]
+
+**Deploy kommandoer:**
+```bash
+# Frontend
+cd frontend
+npm run build
+rsync -avz --delete out/ [user]@[host]:[path]/frontend/
+
+# Backend
+ssh [user]@[host]
+cd [path]/backend
+git pull origin main
+[restart kommando]
+```
+
+### URLs
+- **Production:** https://[domain]
+- **API:** https://api.[domain] (hvis relevant)
+- **Staging:** https://staging.[domain] (hvis relevant)
+
+## API Keys & Credentials
+
+| Service | Purpose | Key/ID | Roteret | Næste rotation |
+|---------|---------|--------|---------|----------------|
+| Supabase | Database | [Project ID] | YYYY-MM-DD | YYYY-MM-DD + 90 dage |
+| OpenAI | AI features | sk-... (første 10 chars) | YYYY-MM-DD | YYYY-MM-DD + 90 dage |
+| [Service] | [Purpose] | [ID/Key prefix] | YYYY-MM-DD | YYYY-MM-DD + 90 dage |
+
+**Note:** Fulde keys gemmes IKKE her - brug .env filer eller password manager.
+
+## Stack
+**Frontend:**
+- Framework: [Next.js, React, etc.]
+- Version: [version]
+- Styling: [Tailwind, CSS, etc.]
+- Build: [kommando]
+
+**Backend:**
+- Framework: [FastAPI, Express, Django, etc.]
+- Version: [version]
+- Database: [PostgreSQL, MySQL, etc.]
+- Runtime: [Node, Python, etc.]
+
+**Infrastructure:**
+- Hosting: [provider]
+- CDN: [hvis relevant]
+- CI/CD: [hvis relevant]
+
+## Environment Variables
+
+**Frontend (.env.local):**
+```
+NEXT_PUBLIC_API_URL=https://api.[domain]
+NEXT_PUBLIC_SUPABASE_URL=https://[project].supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=[key]
+```
+
+**Backend (.env):**
+```
+DATABASE_URL=postgresql://[...]
+SUPABASE_KEY=[key]
+OPENAI_API_KEY=[key]
+```
+
+## Deploy Checklist
+
+- [ ] Build lokalt og test
+- [ ] Commit og push til git
+- [ ] SSH til server
+- [ ] Backup eksisterende deployment
+- [ ] Pull/deploy ny version
+- [ ] Restart services
+- [ ] Test production URL
+- [ ] Verify logs (ingen errors)
+- [ ] Notificer Danny hvis issues
+
+## Maintenance
+
+**Backup schedule:** [dagligt, ugentligt]
+**Monitoring:** [Morten (webmon) checker uptime]
+**Logs location:** [path til logs]
+
+## Notes
+
+[Eventuelle specifikke noter om projektet]
