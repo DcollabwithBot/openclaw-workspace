@@ -39,3 +39,11 @@ memory/heartbeat-state.json
 
 # Workspace subdirs (separate repos)
 workspace/repos/
+
+# Project-specific credentials (never commit)
+**/PROJECT.md
+**/DEPLOY.md
+**/*-credentials.md
+**/.env
+**/.env.local
+**/.env.production
