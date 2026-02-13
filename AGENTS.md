@@ -402,6 +402,35 @@ To control which agents can spawn other agents, use `subagents.allowAgents` on *
 - Use `true` instead of array to allow all agents
 - Omit `subagents` entirely to disable spawning for that agent
 
+### Webmon (Morten)
+**Status:** Dormant (ikke aktivt brugt endnu)
+**Formål:** Website uptime monitoring
+**Fremtidig brug:**
+- Overvåge tjekbolig.ai uptime
+- Alert ved downtime
+- Performance metrics
+
+**Hvis aktiveret:**
+- Spawn fra main med URL + check interval
+- Rapportér status til memory
+
+### Orchestrator (Rene) Tool Justification
+
+**Tools:** exec, write, edit, group:fs, group:memory, sessions_spawn
+
+**Hvorfor så mange?**
+- `exec`: Git, npm, build kommandoer
+- `write`/`edit`: Skrive/redigere kode (hans hovedjob)
+- `group:fs`: File operations til implementation
+- `group:memory`: Dokumentere hvad han gør
+- `sessions_spawn`: Spawne verifier/security til review
+
+**Security mitigation:**
+- Alle ændringer logges i memory
+- Verifier (Peter) reviewer output
+- Git tracking af alle commits
+- Context Validation Protocol (orchestrator validerer tasks)
+
 ### Current Fleet
 
 | Agent | Model | Purpose | Can Spawn |
@@ -410,8 +439,34 @@ To control which agents can spawn other agents, use `subagents.allowAgents` on *
 | monitor | Kimi K2.5 | Lightweight checks | No |
 | researcher | Kimi K2.5 | Web research | No |
 | communicator | Opus 4.6 | Professional writing | No |
-| orchestrator | Sonnet 4.5 | CLI/tool management | monitor, researcher |
-| coordinator | Opus 4.6 | Complex planning | monitor, researcher, communicator, orchestrator |
+| orchestrator | Sonnet 4.5 | CLI/tool management | monitor, researcher, communicator, reviewer, security |
+| coordinator | Opus 4.6 | Complex planning | monitor, researcher, communicator, orchestrator, reviewer, security, complexity-guardian |
+
+## Approval Chain Standard
+
+**Filosofi:** Gør først, verificer bagefter (Danny's "NU" stil)
+
+### Simple tasks (1-3 steps):
+```
+main → orchestrator → [EXECUTE] → (optional verifier)
+```
+
+### Complex tasks (5+ steps):
+```
+main → coordinator (plan)
+     → orchestrator (execute)
+     → [RETURN TO MAIN]
+main → verifier (review)
+     → [OK? Done. Fejl? Fix]
+```
+
+### Destructive operations (ASK FIRST):
+- Slet production data
+- Revoke credentials
+- Force push git history
+- Deploy uden rollback plan
+
+**Verifier (Peter) må KUN spawnes af main (James)** - separation of duties
 
 ## Config Validation Workflow
 
@@ -555,9 +610,9 @@ Alle implementerings-agenter SKAL rapportere kode-lokation:
 
 | Spawner \ Spawnee | monitor | researcher | communicator | reviewer | coordinator | orchestrator | verifier | security | complexity-guardian |
 |-------------------|---------|------------|--------------|----------|-------------|--------------|----------|----------|---------------------|
-| **main**          | ✅      | ✅         | ✅           | ✅       | ✅          | ✅           | ❌       | ✅       | ❌                  |
-| **coordinator**   | ✅      | ✅         | ✅           | ✅       | ❌          | ✅           | ✅       | ✅       | ✅                  |
-| **orchestrator**  | ✅      | ✅         | ✅           | ✅       | ❌          | ❌           | ✅       | ✅       | ❌                  |
+| **main**          | ✅      | ✅         | ✅           | ✅       | ✅          | ✅           | ✅       | ✅       | ❌                  |
+| **coordinator**   | ✅      | ✅         | ✅           | ✅       | ❌          | ✅           | ❌       | ✅       | ✅                  |
+| **orchestrator**  | ✅      | ✅         | ✅           | ✅       | ❌          | ❌           | ❌       | ✅       | ❌                  |
 
 ## Make It Yours
 
