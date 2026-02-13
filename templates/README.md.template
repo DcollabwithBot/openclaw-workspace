@@ -1,0 +1,60 @@
+# [Project Name]
+
+[One-line description]
+
+## Quick Start
+
+- **Production:** https://[domain]
+- **API:** https://api.[domain] (if applicable)
+- **Status:** [Beta/Production]
+- **Hosting:** [Provider]
+
+## For Agents
+
+**Operations info:** Se `PROJECT.md` (gitignored - credentials & deployment)
+
+**Typical workflows:**
+- **Text changes:** Rikke → Rene → Mette
+- **Security:** Bent → Rene → Christian
+- **Features:** Anders → Rene → Peter
+
+## Architecture
+
+**Frontend:**
+- Framework: [Next.js/React/etc]
+- Build: [output directory]
+- Repository: [GitHub URL]
+
+**Backend:**
+- Framework: [FastAPI/Express/etc]
+- Database: [PostgreSQL/MySQL/etc]
+- Repository: [GitHub URL]
+
+**Deployment:**
+- [Brief deployment description]
+- Git: MANDATORY push after deployment
+
+## Project Structure
+
+```
+[project-name]/
+├── README.md           # This file (public)
+├── PROJECT.md          # Operations manual (gitignored)
+├── frontend/           # Frontend code
+└── backend/            # Backend code
+```
+
+## Recent Changes
+
+**YYYY-MM-DD:**
+- [List recent deployments/changes]
+
+## Stack Versions
+
+- [Framework]: [version]
+- [Key dependencies]
+
+## Contact
+
+- **Owner:** [Name]
+- **Primary agent:** [Agent name]
