@@ -48,8 +48,24 @@
 ## Next Steps
 - [x] Complete bootstrap conversation (name, identity, vibe) ✅
 
+## Post-Reddit Research Todo (2026-02-13)
+
+### Høj Prioritet
+- [ ] **Git-track ~/.openclaw config** - Setup git repo i ~/.openclaw for rollback
+- [ ] **Rotating heartbeat** - Erstat fixed 30min med "most overdue" rotation
+- [ ] **Audit USER.md** - Omskriv til "profile + contract" format (ikke dagbog)
+
+### Medium Prioritet
+- [ ] **Tilføj Gemini Flash 3** - Som fallback efter Kimi K2.5 (via OpenRouter)
+- [ ] **Tilføj GLM-5** - Som yderligere billig model at teste (via OpenRouter)
+- [ ] **Discord integration** - Research Discord som erstatning/supplement til webchat
+- [ ] **Telegram integration** - Research Telegram vs Discord, vælg den bedste
+
+### Lav Prioritet
+- [ ] **Test sandbox/container isolation** - Verify Proxmox container actually isolates agent
+
 ## Security Hardening Backlog (2026-02-13)
+- [x] **Explicit tool policies per agent** - ✅ Implementeret korrekt med tool groups
+- [x] **Model fallback observability** - ✅ Tilføjet til HEARTBEAT.md
+- [x] **Worker→Verifier pattern** - ✅ Verifier agent tilføjet
 - [ ] **Test sandbox/container isolation** - Verify Proxmox container actually isolates agent (escape testing)
-- [ ] **Explicit tool policies per agent** - Define allowlists (exec/write/web per agent role)
-- [ ] **Model fallback observability** - Log when fallbacks trigger (Kimi replaces Sonnet)
-- [ ] **Worker→Verifier pattern** - Add verification layer for coder agent outputs
