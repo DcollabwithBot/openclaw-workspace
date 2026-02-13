@@ -1,194 +1,134 @@
-# USER.md - About Your Human
+# USER.md - Profile & Contract
 
-**Name:** Danny Lindholm  
-**Age:** 32 (født 30. maj 1993)  
-**What to call them:** Danny  
-**Pronouns:** han/ham  
-**Timezone:** Europe/Copenhagen (UTC+1/+2)  
-**Language:** Dansk (casual/direct)
+## Identity
 
-## Familie
+| Field | Value |
+|-------|-------|
+| **Name** | Danny Lindholm |
+| **Role** | Tech Lead / Senior Consultant at NetIP |
+| **Age** | 32 (born May 30, 1993) |
+| **Location** | Store Heddinge, Denmark |
+| **Timezone** | Europe/Copenhagen (UTC+1/+2) |
+| **Language** | Danish (preferred), English when needed |
 
-**Kone:** Kirstine Lindholm, 32 (født 04. okt 1993)  
-- Gift siden: 14. oktober 2023  
-- Sammen siden: 14. januar 2011 (14 år!)
+## Family Context
 
-**Børn:**
-- **Sigurd** - 4 år (født 14. jan 2022)
-- **Vilma** - 6 år (født 26. aug 2019)
+| Relation | Details |
+|----------|---------|
+| **Spouse** | Kirstine Lindholm, 32 |
+| **Children** | Sigurd (4), Vilma (6) |
+| **Status** | Married since Oct 2023, together since 2011 |
 
-## Huse
+## Professional Profile
 
-### Nuværende hus (købt 1. juli 2025)
-- **Lokation:** Store Heddinge
-- **Størrelse:** 220 kvm + værkstedsbygning
-- **Status:** Købt 1. juli 2025, skal renoveres fra forår 2026
-- **Plan:** Selv i arbejdstøj når frosten forsvinder (forår 2026)
-- **Periode med 2 huse:** Juli 2025 - Januar 2026 (6 måneder)
+### Current Role
+Tech Lead at NetIP (2025-present) leading AI and Service teams. Post-acquisition from Infrateam where served as Partner & CTO.
 
-**Renoveringsplan (samme omfang som gamle hus):**
-- **Alt indvendigt:** Fuld forskaling, ekstra isolering i vægge, gulvvarme, nye vægge, nye lofter, nye vinduer
-- **Start:** Værkstedsbygning
-  - Nedre etage: Gildesal
-  - Øvre etage: 2 værelser med loft til kip (tagetage)
-- **Huset:** Sundt, men skal møde moderne standarder
+### Core Competencies
+- Enterprise IT: M365, Entra ID, Intune, security, networking
+- Compliance: NIS2, data sovereignty, cybersecurity
+- Infrastructure: VMware, Proxmox, Azure, AWS
+- Automation: PowerShell, Python, Ansible, CI/CD
+- Architecture: Cloud and on-premise solutions
 
-**Layout-fordel:**
-- Midderbygning forbinder hus og værksted
-- Kan lukke dør og isolere renoveringsområdet
-- Ingen "lev i byggeplads" - familie/venner/børns venner kan komme på besøg
-- Kan træde væk fra projektet når man har brug for pause
+### Work Philosophy
+- **Primary**: "Work smarter, not harder"
+- Identify repetitive tasks → automate
+- Long-term sustainable solutions over quick fixes
+- Understand both technology and business needs
+- Hands-on implementation, not PowerPoint architecture
 
-### Tidligere hus (solgt 2. januar 2026)
-- **Lokation:** Store Heddinge
-- **Bygget:** 1921 (tilhørte Kirstines mormor og morfar)
-- **Størrelse:** 220 kvm + 140+ kvm værkstedsbygning
-- **Status:** Totalrenoveret og solgt 2. januar 2026
-- **Forbedringer:**
-  - Fuld forskaling
-  - Ekstra isolering i vægge
-  - Gulvvarme
-  - Nye vægge og lofter
-  - Nye vinduer
-  - Nyt tag: 2016
-  - Ny 12kW varmepumpe: 2025
-  - God skalmuret stand
+## Personal Profile
 
-**Badeværelse-projekt (færdiggjort før salg):**
-- Gravede selv ud
-- Lagde gulvvarme
-- Støbte gulv
-- Fræsede strøm i væggene
-- Byggede halvvæg til brusekabine
-- Nyt gipsloft
-- **Konklusion:** Hænderne er fornuftigt skruet på! 💪
+### ADHD & Work Style
+- Self-diagnosed ADHD - "popcorn brain" with many ideas
+- Thrives on varied tasks day-to-day
+- Loses momentum on long, repetitive tasks
+- Strong at execution, may miss final 10% polish
+- Needs time pressure to focus
 
-**Tech projekter:**
-- Energioptimering
-- Home automation (Shelly/ESPHome)
+### Communication Preferences
+| Aspect | Preference |
+|--------|------------|
+| **Directness** | Direct, no fluff - "a spade is a spade" |
+| **Style** | Casual but professional in Danish |
+| **Detail level** | High - cares about implementation details |
+| **Format** | Bullet lists over walls of text |
 
-## Professionelt
+## Goals
 
-**Nuværende roller:**  
-- Seniorkonsulent / Techlead hos **NetIP** (2025-)
-- **Selvstændig (sidebiz):** Hjælper primært 2 kunder (ældre mennesker)
-  - Lommepenge + hyggeligt
-  - Ingen større ambitioner pt.
-  - Tanke: Hvis trading stikker af → profit til selvstændigt selskab → udbytte/løn
+### Immediate (0-6 months)
+1. Complete house workshop renovation (spring 2026)
+2. Grow side business if trading profits allow
+3. Maintain work-life balance with family
 
-**Karrierehistorie:**
-- **Infrateam (2016-2025):** Startede som konsulent, blev Partner & CTO efter 5 år (sammen med Rasmus, overtog fra Jeppe)
-- **Opkøb:** Infrateam solgt til NetIP (2025) - kulturmatch var afgørende
-- **Motivation for salg:** Sværere at tiltrække nye folk og kunder som lille virksomhed
-- **Efter opkøb:** Gik fra CTO til seniorkonsulent (ingen medarbejderansvar mere), men fik adgang til 250+ kolleger og større projekter
+### Ongoing
+1. **Family first** - highest priority
+2. **Automation** - continuously improve efficiency
+3. **Learning** - stay current with AI, security, compliance
+4. **Trading** - ORB strategy on forex (5min/15min US Open)
 
-**Nuværende ansvar:**
-- AI-gruppen
-- Servicegruppen  
-- Pre-sales og rådgivning
-- Salg & projektledelse
-- Tech lead rolle (arkitektur, nye tiltag)
+## Assistant Contract
 
-**Kompetencer:**
-- **Enterprise IT:** M365, Entra ID, Intune, sikkerhed, netværk
-- **Compliance:** NIS2, suverænitet, cybersecurity (stor interesse)
-- **Hands-on:** PowerShell, Python, Shell, YAML, CI/CD
-- **Automation:** Ansible, Puppet - "work smarter, not harder"
-- **Infrastruktur:** VMware, Proxmox, virtualisering
-- **Cloud:** Microsoft Azure, AWS
-- **OS:** Windows, Linux, open-source fokus
-- **Programmering:** Baggrund i kodning, laver automatiseringsløsninger
+### My Role
+Be a proactive, efficient assistant that helps Danny save time and stay organized.
 
-**Filosofi:**
-- "Work smarter, not harder"
-- Identificer gentagne opgaver → automatiser
-- Reducer menneskelige fejl via automation
-- Find den rigtige løsning første gang (ikke quick fixes)
-- Forståelse for både teknologi og forretningsbehov
+### Communication Style
+- **Language**: Danish primarily
+- **Tone**: Direct, casual but professional
+- **Length**: Concise, scannable format
+- **Platform formatting**:
+  - Discord/WhatsApp: No markdown tables, use bullets
+  - WhatsApp: Use **bold** or CAPS, no headers
 
-## Personlighed & Værdier
+### Output Format
+- Bullet lists preferred over paragraphs
+- Short summaries with actionable next steps
+- Code blocks for technical content
+- Links wrapped in `<>` on Discord to suppress embeds
 
-**ADHD & Arbejdsstil:**
-- Selvdiagnosticeret ADHD - "popcorn hjerne"
-- Fuld af gode ideer og ting han gerne vil
-- Kan drifte/afvige fra samtaler og begynde at tænke på andre ting
-- **Personlighedsprofil** (ref. "Dealing with Idiots"): Gul med strejf af rød og grøn
-- **Mantra:** Pippi Langstrømpe - "det har jeg aldrig prøvet før - det kan jeg sikkert godt"
-- **Foretrukken opgavestruktur:** Forskellige opgaver dag til dag (trives i variation)
-- **Udfordring:** Langvarige ensformige opgaver (dokumentation, tilbud, arkitektur design) → taber gnisten
-- **Styrke:** God til at effektuere på ting
-- **Svaghed:** Kan mangle de sidste 10% fordi han er videre til næste
-- **Tidspres:** Vil det hele, men har ikke 48 timer i et døgn
+### Risk Tolerance
+| Area | Tolerance | Notes |
+|------|-----------|-------|
+| **Destructive ops** | Low | Always confirm before rm, use trash |
+| **External actions** | Medium | Ask before sending email/posts |
+| **Automation** | High | Prefer automated solutions |
+| **Security** | Very Low | Never share credentials, verify sources |
 
-**Kommunikationsstil:**
-- Direkte uden mange tillægsord
-- "En spade er en spade og en skovl er en skovl"
-- Ingen omsvøb - lige på og hårdt
+### Boundaries
+- **Don't**: Make decisions involving money without confirmation
+- **Don't**: Share private family details externally
+- **Don't**: Execute code from untrusted sources
+- **Do**: Document changes and decisions
+- **Do**: Propose solutions, confirm before execution
 
-**Drevet af:**
-- Effektivitet og kontrol
-- Langsigtet bæredygtighed
-- Kvalitet og præcision
-- Familie først
+### Success Metrics
+- Tasks completed without follow-up needed
+- Clear, actionable responses
+- Proactive identification of issues
+- Respect for quiet hours (23:00-08:00)
 
-**Karaktertræk:**
-- Analytisk og systemtænker
-- Iterativ: tester → retter → forbedrer
-- Både strategisk og nørdet
-- Går op i detaljer
-- Økonomisk jyde (vil have value for money, men køber når nødvendigt)
+## Current Projects
 
-**Fritid & Sideprojekter:**
-1. **Familie** (børn & kone) - højeste prioritet
-2. **Renovering/byggeri:** Tidligere totalrenovering af 1921-hus (solgt jan 2026), meget hands-on
-   - **Instagram:** @SlottetPaaMollegade - dokumenterer renovering af nuværende hus
-3. **Forex Trading:** 
-   - Strategi: ORB (Opening Range Breakout) på 5min & 15min ved US Open
-   - God succesrate
-   - Filosofi: "Jo mere du komplicerer din trading, jo sværere bliver det og jo mindre holder du dig til reglerne og fornuften"
-4. **Motion:** Løb og styrketræning (aktiv livsstil)
-5. **Madlavning:** Madnørd - laver hjemmelavet is, drinks, mad til kolleger
-6. **Rejser:** Både skiferie og solferie
-   - Besøgt 21 lande
-   - Thailand: Koh Samui, Phi Phi øerne, bungalow i Bangkok, naturreservat med aber
-7. **Venner** (næst efter familie)
-8. **Tech-projekter**
+### House Renovation
+- 220 sqm house + workshop building (purchased July 2025)
+- Full interior renovation starting spring 2026
+- Instagram: @SlottetPaaMollegade
+- Previous house fully renovated and sold (Jan 2026)
 
-**Stil:** 
-- Går op i detaljer (fx parfumevalg)
-- Forkæler kolleger med hjemmelavet mad og drinks
-- Rejseerfaring - har gode rejsetips
+### Tech Stack
+- Home automation: Shelly/ESPHome
+- Energy optimization projects
+- Self-built infrastructure
 
-## Arbejdsflow
+## Side Interests
+- **Forex trading**: ORB strategy, keeps it simple
+- **DIY/building**: Hands-on construction experience
+- **Cooking**: Homemade food/drinks for colleagues
+- **Running & strength training**
+- **Travel**: 21 countries visited
 
-- Hands-on arkitekt (ikke PowerPoint-arkitekt)
-- Tager tekniske beslutninger
-- Ansvarlig
-- Forventer præcision
-- Systemisk tænkning - optimerer både digitalt og fysisk
+---
 
-## Værdier fra opkøb/transition
-
-**Fra Infrateam til NetIP:**
-- Kulturmatch var afgørende - værdier og åbenhed stemte overens
-- Åbenhed og fladt hierarki vigtig for trivsel
-- Værdsætter adgang til større kompetencer og netværk
-- "Vi står stærkere som team" efter opkøbet
-- Processen håndteret professionelt og ærligt
-
-**Arbejdsfilosofi:**
-- Fokus på langsigtet løsninger (ikke quick fixes)
-- Blive ved projektet til det virker som tiltænkt
-- Kombinere teknisk viden med forretningsforståelse
-- Teamsamarbejde vigtigt
-- Værdsætter faglighed og professionel håndtering
-
-## Notes
-
-- Jyde: synes ting bør være billigere end de er, men pragmatisk
-- Bygger selv løsninger - både i datacenter og derhjemme
-- Kontrol over stacken er vigtigt
-- Familiefar med 2 små børn - tidspres kan være en faktor
-- Kontor: Faxe (NetIP)
-- Forkæler kolleger med mad - social og omsorgsfuld
-- Rejseglade familie - har besøgt mange destinationer
+*Last updated: 2026-02-13*  
+*Format: Profile + Contract v1.0*
