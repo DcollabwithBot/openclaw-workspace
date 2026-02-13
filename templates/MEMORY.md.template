@@ -1,0 +1,37 @@
+# MEMORY.md — Index
+
+> Lightweight index, max 3k tokens. Detail lives in subdirectories.
+> **Maintenance:** Archive monthly via memory-cleanup.sh
+> **Archive:** Old entries in memory/archive/[YYYY-MM]/
+
+## Active Context (last 30 days - was active last month)
+<!-- Only recent/high-priority items. Roll topics to Active if resurfacing -->
+- `memory/context/setup.md` — current setup status & next steps
+- `memory/projects/[project].md` — active project details
+
+## Archive Marker
+> Older context: See `memory/archive/[YYYY-MM]/`
+
+## People
+| Who | File | Triggers |
+|-----|------|----------|
+| [Name] | `memory/people/[name].md` | [when to load] |
+
+## Projects
+| Project | File | Status |
+|---------|------|--------|
+| [Name] | `memory/projects/[project].md` | [status] |
+
+## Notes
+- [Key decisions, lessons learned]
+- **Cleanup due:** [Next cleanup date]
+
+---
+
+# Daily Log
+
+## [HH:MM] [Event name]
+- Quick summary
+- Reference: [link if detailed]
+
+[Continue for today's events]
