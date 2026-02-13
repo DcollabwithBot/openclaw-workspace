@@ -453,6 +453,76 @@ pkill -USR1 -f "openclaw gateway"
 - Validér altid med doctor før restart
 - Git backup redder dig når det går galt
 
+
+## Mandatory Validation Workflow
+
+**ALLE ændringer skal følge denne proces:**
+
+### 1. Design & Syntax Check
+- Verificer JSON syntax med `jq`
+- Tjek gyldige felter mod OpenClaw schema
+- Dokumenter ændringen i design doc
+
+### 2. Pre-Implementation Validation
+```bash
+# Test JSON syntax
+cat proposed-config.json | jq . > /dev/null && echo "✅ Valid JSON"
+
+# Dry-run merge
+jq -s '.[0] * .[1]' current-config.json proposed-changes.json > /tmp/merged.json
+
+# Validate merged config
+openclaw doctor --config /tmp/merged.json
+```
+
+### 3. Implementation med Backup
+```bash
+# Backup altid først
+cp ~/.openclaw/openclaw.json ~/.openclaw/openclaw.json.backup-$(date +%s)
+
+# Implementer med jq MERGE
+jq 'MERGE_EXPRESSION' ~/.openclaw/openclaw.json > /tmp/new-config.json
+mv /tmp/new-config.json ~/.openclaw/openclaw.json
+```
+
+### 4. Post-Implementation Validation
+```bash
+# Validér med doctor
+openclaw doctor
+
+# Hvis fejl - automatic rollback
+if [ $? -ne 0 ]; then
+  echo "❌ Config invalid - rolling back"
+  cp ~/.openclaw/openclaw.json.backup-* ~/.openclaw/openclaw.json
+  exit 1
+fi
+
+# Restart gateway
+pkill -USR1 -f "openclaw gateway"
+```
+
+### 5. Verification
+```bash
+# Verificer ændringer er applied
+cat ~/.openclaw/openclaw.json | jq '.PATH.TO.CHANGED.FIELD'
+
+# Test at agent kan spawnes
+openclaw chat --agent AGENT_ID --message "test" --timeout 10s
+```
+
+### 6. Commit til Git
+```bash
+cd ~/.openclaw
+git add openclaw.json
+git commit -m "TYPE: beskrivelse af ændring"
+git push origin main
+```
+
+**Gælder for:**
+- ✅ Config ændringer (agents, tools, models)
+- ✅ Kode ændringer (scripts, skills)
+- ✅ Security policies
+- ✅ Alt der påvirker system behaviour
 ## Make It Yours
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
