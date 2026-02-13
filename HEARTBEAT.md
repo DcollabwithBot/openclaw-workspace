@@ -45,6 +45,12 @@ Format:
 - Monthly reset: 1st of month via cron
 - Last check: read `lastChecks.brave_quota` from state
 
+### 5. Model Fallback Monitor (every 2 hours)
+- Check gateway log for fallback events: `grep -i "fallback\|failover" /tmp/openclaw/openclaw-$(date +%Y-%m-%d).log | tail -20`
+- Alert if Anthropic → Kimi fallbacks detected (especially for main/coordinator/communicator)
+- Track frequency - single fallback OK, repeated = issue
+- Last check: read `lastChecks.fallback_monitor` from state
+
 ## Quiet Hours
 - Late night (23:00-08:00 UTC+1) → only urgent items
 - Respect if user is clearly busy

@@ -46,9 +46,10 @@
 - [x] Quota monitoring skill ✅
 
 ## Next Steps
-- [ ] Complete bootstrap conversation (name, identity, vibe)
-- [x] Todoist task tracking (visibility into agent work) ✅
-- [x] GitHub integration (dspammails-rgb bot account) ✅
-- [ ] Invite dspammails-rgb to DcollabwithBot org
-- [ ] Explore additional skills from clawhub.com
-- [ ] Consider integrations: email, calendar, weather (when needed)
+- [x] Complete bootstrap conversation (name, identity, vibe) ✅
+
+## Security Hardening Backlog (2026-02-13)
+- [ ] **Test sandbox/container isolation** - Verify Proxmox container actually isolates agent (escape testing)
+- [ ] **Explicit tool policies per agent** - Define allowlists (exec/write/web per agent role)
+- [ ] **Model fallback observability** - Log when fallbacks trigger (Kimi replaces Sonnet)
+- [ ] **Worker→Verifier pattern** - Add verification layer for coder agent outputs
