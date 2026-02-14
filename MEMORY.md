@@ -82,6 +82,13 @@
 | coordinator | Opus 4.6 | read, memory, web, sessions | Planning |
 | verifier | Sonnet 4.5 | read, memory, web | Quality check |
 
+## Today's Key Decisions (2026-02-14)
+- 11→4 agent migration complete
+- Anti-vibe-slop plan implemented
+- Context budget: 10k token max
+- Security: API keys never in chat
+- Cost: $50/mo hard limit
+
 ## Drill-Down Rules
 1. Always load Active Context files at session start
 2. Drill into people/ when conversation mentions a person

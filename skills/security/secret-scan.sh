@@ -15,9 +15,9 @@ PATTERNS=(
   '[0-9a-zA-Z/+]{40}'             # AWS Secret Key (base64-like)
   'ya29\.[a-zA-Z0-9_-]+'          # Google OAuth tokens
   'pat-[a-zA-Z0-9]{22}'           # DigitalOcean tokens
-  'Bearer\s+[a-zA-Z0-9_-]+'       # Generic bearer tokens
-  'api[_-]?key\s*[=:]\s*["'\'']?[a-zA-Z0-9]{16,}' # Generic API keys
-  'password\s*[=:]\s*["'\'']?[^"'\n]{8,}' # Passwords
+  'Bearer[[:space:]]+[a-zA-Z0-9_-]+'  # Generic bearer tokens
+  'api[_-]?key[[:space:]]*=[[:space:]]*[a-zA-Z0-9]{16,}'  # Generic API keys
+  'password[[:space:]]*=[[:space:]]*[^[:space:]]{8,}'     # Passwords
 )
 
 echo "{\"scan_time\": \"$(date -Iseconds)\", \"directory\": \"$DIR\", \"secrets_found\": false, \"matches\": []}" > "$OUTPUT_FILE"
