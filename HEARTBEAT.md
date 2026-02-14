@@ -215,3 +215,23 @@ When a session ends (before replying final message):
 
 **Alert:** Exit 1 if files >100KB found
 **Update:** `lastChecks.file_size_check`
+
+### 12. Pattern Learning Check (every 24h)
+**Interval:** 86400 seconds
+**Cost:** $0 (pure bash/regex)
+**Purpose:** Auto-learn from failure patterns in memory
+
+**Command:** `bash skills/learning/pattern-matcher.sh`
+
+**Scans:** Last 7 days of memory/*.md files
+**Detects:** Failure patterns via regex matching
+**Updates:** `memory/behavior-corrections.json`
+**Auto-fix:** Runs `skills/learning/auto-patcher.sh` to apply fixes
+
+**Patterns tracked:**
+- Profile/minimal/allow conflicts → AGENTS.md tool-policies
+- Deployment credential issues → PROJECT.md requirements
+- Danish workflow patterns → AGENTS.md workflows
+
+**Alert:** Exit 1 if new patterns detected (triggers patch application)
+**Update:** `lastChecks.pattern_learning`
