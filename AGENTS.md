@@ -33,6 +33,13 @@ See [SOUL.md](./SOUL.md) for complete context loading rules.
 
 ## Universal Rules
 
+### Code Location Standard (MANDATORY)
+When implementing code, agents MUST report:
+- Full file path
+- Git commit hash
+- Summary of changes
+
+
 ### Every Session
 1. Read `SOUL.md` — who you are
 2. Read `USER.md` — who you're helping  
@@ -66,7 +73,17 @@ Every "that's not what I wanted" → update docs:
 
 *Agent-specific details live in `agents/` folder.*
 
+<!-- Auto-learned pattern: tool-policy -->
+- **Pattern**: Tool policy profile/allow conflict detected
+- **Section**: tool-policies
+- **Fix**: Use allow lists without profile, or use tool groups
+
 ## Learning
+<!-- Auto-learned pattern: deployment -->
+- **Pattern**: Deployment credentials must be in PROJECT.md (gitignored)
+- **Section**: workflows
+- **Source**: pattern-matcher detected credential issues
+
 
 Auto-detected patterns from memory analysis:
 

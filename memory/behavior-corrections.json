@@ -1,23 +1,48 @@
 {
   "patterns": [
     {
-      "description": "Deployment credential handling needed",
-      "target": "PROJECT.md",
-      "section": "requirements",
-      "regex": "deployment.*credential",
-      "source": "/root/.openclaw/workspace/memory/2026-02-13.md",
-      "found": "2026-02-13",
-      "applied": false
+      "id": "tool-policy-conflict-1771095416",
+      "type": "tool-policy-conflict",
+      "description": "Tool policy profile/allow conflict detected",
+      "context": "**Første forsøg - Forkerte tool-navne:** - Implementerede tool policies med `profile: \"minimal\"` + custom allow-lists - Main agent mistede ALLE tools efter restart - Problem: `profile: \"minimal\"` blokerer alt, allow-list virker ikke som forventet  -- - Tool groups: `group:sessions`, `group:memory`, `group:fs`, `group:runtime`, `group:ui` osv. - `allow`-lister uden profile virker bedre end `profile: \"minimal\"` + allow  -- ",
+      "timestamp": "2026-02-14T18:56:56Z",
+      "autoFix": true,
+      "applied": true
     },
     {
-      "description": "Danish 'sidste 10%' workflow pattern detected",
-      "target": "AGENTS.md",
-      "section": "workflows",
-      "regex": "sidste.*10%",
-      "source": "/root/.openclaw/workspace/memory/2026-02-13.md",
-      "found": "2026-02-13",
+      "id": "cred-issue-1771095416",
+      "type": "deployment-credential",
+      "description": "Deployment credential management issue",
+      "context": "**Critical mistakes:** 1. ❌ Specificerede IKKE nordicway deployment 2. ❌ Manglende SSH credentials/paths  **Danny's feedback:** \"han ved også godt at han skal deploy til nordicway ikke?\"  **Lesson learned #6:** > \"Deployment tasks SKAL inkludere: Host, credentials, paths, URLs, metode. Aldrig antag at 'deploy' er nok.\"  -- ",
+      "timestamp": "2026-02-14T18:56:56Z",
+      "autoFix": true,
       "applied": true
+    },
+    {
+      "id": "danish-workflow-1771095416",
+      "type": "danish-workflow",
+      "description": "Danish workflow pattern (sidste 10%)",
+      "context": "- \"Popcorn hjerne\" - fuld af gode ideer og ting han gerne vil - **Svaghed:** Kan mangle de sidste 10% fordi han er videre til næste - Reminders om \"de sidste 10%\" ",
+      "timestamp": "2026-02-14T18:56:56Z",
+      "autoFix": false
+    },
+    {
+      "id": "context-error-1771095416",
+      "type": "context-handling",
+      "description": "Code location/context reporting issue",
+      "context": " **Root cause:** Ingen standard for kode-lokalitets rapportering mellem agenter.  **Fix implementeret:** - Tilføjet **Kode-Lokalitetsstandard (MANDATORY)** til AGENTS.md - Alle implementerings-agenter SKAL rapportere:   - Location: `workspace/projects/[projekt]/[fil]` -- - Config: `2e460c4` - \"fix: Add security to spawn permissions\" - Workspace: `c3cf4a8` - \"docs: Add Kode-Lokalitetsstandard and Spawn Permissions Matrix\"  ## [18:21] Security Audit af Agent Fleet ",
+      "timestamp": "2026-02-14T18:56:56Z",
+      "autoFix": true,
+      "applied": true
+    },
+    {
+      "id": "rate-limit-1771095416",
+      "type": "rate-limit",
+      "description": "Rate limiting or fallback issue",
+      "context": "- Fallback chain: Kimi K2.5 (OpenRouter) → Kimi NVIDIA (free) - Kimi handles routine work, fallback safety net 2. **researcher** (Kimi K2.5 → Sonnet fallback): ",
+      "timestamp": "2026-02-14T18:56:56Z",
+      "autoFix": false
     }
   ],
-  "lastScan": "2026-02-14T18:45:36Z"
+  "lastScan": "2026-02-14T18:56:56Z"
 }
