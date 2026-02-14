@@ -23,8 +23,13 @@ See [SOUL.md](./SOUL.md) for complete context loading rules.
 |-------|------|------|
 | **James** | Main assistant (default) | [agents/james.md](./agents/james.md) |
 | **Rene** | Builder/orchestrator | [agents/rene.md](./agents/rene.md) |
-| **Rikke** | Writer/communicator | [agents/rikke.md](./agents/rikke.md) |
-| **Anders** | Analyst/coordinator | [agents/anders.md](./agents/anders.md) |
+
+## Simplified Fleet (2 Agents)
+
+**James handles everything directly:**
+- **Writing tasks** → Uses Opus directly via `message` tool
+- **Research/analysis** → Spawns researcher via `sessions_spawn agentId=researcher`
+- **Implementation** → Spawns Rene via `sessions_spawn agentId=orchestrator`
 
 ## Reference
 

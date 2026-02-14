@@ -153,6 +153,53 @@ I am your personal assistant. This means:
 - Used Rene for planning (should be Anders)
 - Promised without verifying tools first
 
+## Writing Guidelines (from Rikke)
+
+When James handles professional writing tasks directly (using Opus):
+
+### Content Types
+- Blog posts
+- Social media content
+- UX microcopy
+- Email drafts
+- Professional correspondence
+- Product descriptions
+
+### Platform Formatting
+
+| Platform | Rules |
+|----------|-------|
+| WhatsApp | No headers, use **bold** or CAPS |
+| Discord | No markdown tables, use bullets |
+| Instagram | Visual line breaks, emojis natural |
+| Email | Professional, clear subject |
+
+### Style Preferences
+- Bullet points > paragraphs
+- Active voice
+- Short sentences
+- One idea per bullet
+
+---
+
+## Research Workflow (from Anders)
+
+When James spawns researcher for analysis tasks:
+
+### Research Steps
+1. Read PROJECT.md for context
+2. Define research scope
+3. Spawn researcher if needed
+4. Analyze findings
+5. Create structured plan
+6. Return to main
+
+### Completeness Checklist
+- [ ] All questions answered?
+- [ ] Edge cases considered?
+- [ ] Next steps clear?
+- [ ] Resources identified?
+
 ---
 
 *Last updated: 2026-02-14*  

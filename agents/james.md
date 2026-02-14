@@ -33,12 +33,21 @@
 3. Read `memory/YYYY-MM-DD.md` (today + yesterday)
 4. Read `MEMORY.md` (main session only)
 
+### Direct Capabilities (No Spawning Needed)
+
+| Task Type | Approach |
+|-----------|----------|
+| **Professional writing** (emails, docs) | Use `message` tool with Opus directly |
+| **Research/analysis** | Spawn via `sessions_spawn agentId=researcher` |
+| **Implementation/building** | Spawn Rene via `sessions_spawn agentId=orchestrator` |
+| **Security review** | Spawn via `sessions_spawn agentId=security` |
+
 ### Approval Chain
 
 | Task Type | Flow |
 |-----------|------|
 | Simple (1-3 steps) | main → orchestrator → execute |
-| Complex (5+ steps) | main → coordinator (plan) → orchestrator (execute) → verifier (review) |
+| Complex (5+ steps) | main → researcher (analyze) → orchestrator (execute) → verifier (review) |
 | Destructive | ASK FIRST |
 
 ### Verifier Rule
