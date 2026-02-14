@@ -1,8 +1,18 @@
 # James (main) - Default Assistant
 
 **ID:** `main`  
-**Model:** Sonnet 4.5  
+**Default model:** Sonnet 4.5 ($3/$15 per M)  
 **Role:** Primary assistant for Danny
+
+## Cost Optimization
+
+| Task Type | Model | Cost |
+|-----------|-------|------|
+| **Daily chat** | Sonnet 4.5 | ~$0.03/interaction |
+| **Professional writing** | Opus (via Rikke spawn) | ~$0.10/message |
+| **Background tasks** | Kimi | $0 |
+
+**Rule:** Opus ONLY when high-quality writing needed. Spawn Rikke explicitly.
 
 ## Tools
 
@@ -37,7 +47,8 @@
 
 | Task Type | Approach |
 |-----------|----------|
-| **Professional writing** (emails, docs) | Use `message` tool with Opus directly |
+| **Professional writing** (emails, docs) | Spawn Rikke with Opus explicitly |
+| **High-quality content** (blog, social media) | Spawn Rikke via `sessions_spawn agentId=writer` |
 | **Research/analysis** | Spawn via `sessions_spawn agentId=researcher` |
 | **Implementation/building** | Spawn Rene via `sessions_spawn agentId=orchestrator` |
 | **Security review** | Spawn via `sessions_spawn agentId=security` |

@@ -1,0 +1,59 @@
+{
+  "version": "2.0",
+  "agents": {
+    "main": {
+      "id": "main",
+      "name": "James",
+      "model": "anthropic/claude-sonnet-4-5",
+      "description": "Primary assistant for Danny - daily chat and coordination",
+      "fallbacks": [
+        "anthropic/claude-sonnet-4",
+        "openrouter/moonshotai/kimi-k2.5"
+      ]
+    },
+    "orchestrator": {
+      "id": "orchestrator",
+      "name": "Rene",
+      "model": "anthropic/claude-sonnet-4-5",
+      "description": "Builder - implementation and technical execution"
+    },
+    "researcher": {
+      "id": "researcher",
+      "name": "Anders",
+      "model": "openrouter/moonshotai/kimi-k2.5",
+      "description": "Research and analysis - free model for background tasks"
+    },
+    "writer": {
+      "id": "writer",
+      "name": "Rikke",
+      "model": "anthropic/claude-opus-4-5",
+      "description": "Professional writing - Opus only for high-quality content",
+      "spawn_only": true
+    }
+  },
+  "model_routing": {
+    "daily_chat": {
+      "agent": "main",
+      "model": "anthropic/claude-sonnet-4-5",
+      "cost_per_1m_tokens": "$3/$15",
+      "cost_per_interaction": "~$0.03"
+    },
+    "professional_writing": {
+      "agent": "writer",
+      "model": "anthropic/claude-opus-4-5",
+      "cost_per_1m_tokens": "$15/$75",
+      "cost_per_interaction": "~$0.10",
+      "note": "ONLY via explicit spawn to Rikke"
+    },
+    "background_tasks": {
+      "agent": "researcher",
+      "model": "openrouter/moonshotai/kimi-k2.5",
+      "cost": "$0"
+    }
+  },
+  "cost_targets": {
+    "monthly_budget": "$13-20",
+    "max_monthly": "$40",
+    "daily_interactions_estimate": 20
+  }
+}

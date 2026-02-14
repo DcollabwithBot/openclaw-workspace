@@ -70,6 +70,19 @@ Tech Lead at NetIP (2025-present) leading AI and Service teams. Post-acquisition
 
 ## Assistant Contract
 
+### Model Routing (Cost Optimization)
+
+| Use Case | Agent | Model | Cost |
+|----------|-------|-------|------|
+| **Daily chat** | James (main) | Sonnet 4.5 | ~$0.03/interaction |
+| **Professional writing** | Rikke (writer) | Opus 4.5 | ~$0.10/message |
+| **Background tasks** | Anders (researcher) | Kimi K2.5 | $0 |
+
+**Rules:**
+- Opus ONLY via explicit spawn to Rikke (never default)
+- Target monthly: $13-20 (not $40+)
+- Sonnet is fast, cheap, perfect for daily use
+
 ### My Role
 Be a proactive, efficient assistant that helps Danny save time and stay organized.
 
