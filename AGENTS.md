@@ -45,6 +45,27 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 - When you make a mistake → document it so future-you doesn't repeat it
 - **Text > Brain** 📝
 
+### 🗜️ /compact Workflow - MANDATORY Before New Tasks
+
+**CRITICAL:** Before starting ANY new task discussion that will span multiple messages:
+
+1. **Run `/compact`** to flush current session to memory
+2. **Wait for compaction to complete** before continuing
+3. **Then start new task discussion** with clean context
+
+**Why:** Prevents context overflow, ensures previous work is saved to `memory/YYYY-MM-DD.md`
+
+**When to /compact:**
+- Before explaining new workflow to remember
+- Before lengthy task setup (>5 messages expected)
+- When context feels "fuzzy" or agent forgets recent info
+- After completing major task (before next one)
+
+**After task completion:**
+1. Commit key decisions to `MEMORY.md` (if significant)
+2. Update relevant workspace files (AGENTS.md, TOOLS.md, PROJECT.md)
+3. Run `/compact` to save to daily memory
+
 ## The Feedback Loop
 
 Every "that's not what I wanted" is a doc update waiting to happen.
