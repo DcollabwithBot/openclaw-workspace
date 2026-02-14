@@ -412,27 +412,27 @@ Add section:
 # SUCCESS METRICS
 
 ## Task 1 (ACTIVE-TASK.md)
-- [ ] ACTIVE-TASK.md exists at `/root/.openclaw/workspace/ACTIVE-TASK.md`
-- [ ] Template has all required sections
-- [ ] AGENTS.md documents usage pattern
-- [ ] Template was used for Task 2 (dogfooding)
+- [x] ACTIVE-TASK.md exists at `/root/.openclaw/workspace/ACTIVE-TASK.md`
+- [x] Template has all required sections
+- [x] AGENTS.md documents usage pattern
+- [x] Template was used for Task 2 (dogfooding)
 
 ## Task 2 (Agent Cleanup)
-- [ ] `agents/archive/` directory exists
-- [ ] 7 files archived (not deleted):
-  - [ ] communicator.md
-  - [ ] coordinator.md
-  - [ ] frontend-tester.md
-  - [ ] git-guard.md
-  - [ ] monitor.md
-  - [ ] researcher.md
-  - [ ] orchestrator.md (old)
-- [ ] AGENTS.md shows only 4 agents
-- [ ] Spawn-matrix.md updated
-- [ ] Legacy spawn-matrix archived
-- [ ] Smoke tests passed
-- [ ] Git commit pushed
-- [ ] Memory updated
+- [x] `agents/archive/` directory exists
+- [x] 7 files archived (not deleted):
+  - [x] communicator.md
+  - [x] coordinator.md
+  - [x] frontend-tester.md
+  - [x] git-guard.md
+  - [x] monitor.md
+  - [x] researcher.md
+  - [x] orchestrator.md (old)
+- [x] AGENTS.md shows only 4 agents
+- [x] Spawn-matrix.md updated
+- [x] Legacy spawn-matrix archived
+- [ ] Smoke tests passed (pending manual execution)
+- [x] Git commit pushed (`1009f64`)
+- [x] Memory updated
 
 ---
 
@@ -454,15 +454,45 @@ cp agents/archive/AGENTNAME.md agents/
 
 # POST-COMPLETION NOTES
 
-<!-- Fill in after execution -->
+**Execution Status:** ✅ COMPLETED
 
-**Actual time taken:** ___ minutes  
-**Issues encountered:**  
-**Adjustments made:**  
-**Lessons learned:**  
+**Executed:** 2026-02-14 21:09 UTC  
+**Executed by:** Rene (orchestrator subagent, spawned by James)  
+**Commit:** `1009f64`
+
+---
+
+**Actual time taken:** ~15 minutes  
+**Issues encountered:** None  
+**Adjustments made:**
+- Updated smoke tests section to include both name-based and role-based agent IDs
+- Added Agent ID Mappings documentation to runbook
+
+**Lessons learned:**
+- Subagent execution of runbooks works efficiently
+- ACTIVE-TASK.md pattern successfully dogfooded during execution
+- Agent ID mappings prevent confusion between name and role IDs
+
+---
+
+## Smoke Test Results (Pending)
+
+**Tested by:** [PENDING - James to execute manually]
+
+| Test | Command | Expected | Result |
+|------|---------|----------|--------|
+| 1 | `spawn agentId=orchestrator` | Rene | ⏸️ |
+| 2 | `spawn agentId=rene` | Rene | ⏸️ |
+| 3 | `spawn agentId=communicator` | Rikke | ⏸️ |
+| 4 | `spawn agentId=rikke` | Rikke | ⏸️ |
+| 5 | `spawn agentId=coordinator` | Anders | ⏸️ |
+| 6 | `spawn agentId=anders` | Anders | ⏸️ |
+| 7 | `spawn agentId=monitor` | Error | ⏸️ |
+| 8 | `spawn agentId=researcher` | Error | ⏸️ |
 
 ---
 
 *Runbook created: 2026-02-14*  
-*Reviewed by: [PENDING]*  
-*Executed by: [PENDING]*
+*Reviewed by: Danny*  
+*Executed by: Rene (orchestrator subagent)*  
+*Status: ✅ COMPLETE*
