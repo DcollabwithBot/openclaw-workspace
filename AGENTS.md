@@ -388,6 +388,30 @@ ls -lh ~/.openclaw/workspace/skills/*/SKILL.md
 
 **Status:** All our skills are self-created and git-tracked ✅
 
+### 🔐 API Key Security - CRITICAL
+
+**NEVER:**
+- ❌ Post API keys in chat (WhatsApp, Discord, etc.)
+- ❌ Show full keys in logs or output  
+- ❌ Commit keys to git (use .env only)
+- ❌ Share keys with other agents
+
+**ALWAYS:**
+- ✅ Use `[REDACTED]` or `sk-***` format if mentioning keys
+- ✅ Reference keys by name: "Brave API key in .env"
+- ✅ Check .gitignore has `.env` before any git ops
+
+**Brave API Usage:**
+- Primary: web_search for research (track quota!)
+- Only use browser if:
+  1. web_search fails, OR
+  2. Danny explicitly asks for UI/web testing
+- Track usage to avoid quota limits
+
+**Quota Tracking:**
+- Check `memory/brave-quota.json` before searches
+- Log usage after each web_search
+
 ## Agent Fleet Configuration
 
 ### Subagent Spawning Permissions
