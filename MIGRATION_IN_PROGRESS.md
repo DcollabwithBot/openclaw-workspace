@@ -62,13 +62,29 @@
 
 ---
 
-## P2 - AGENT SIMPLIFICATION (NÆSTE UGE)
+## P2 - AGENT SIMPLIFICATION (I GANG - 2026-02-14 16:22)
 
-Remove 7 agents, keep 4:
-- Keep: James, Rene, Rikke, Anders
-- Remove: Bent, Mette, Karl, Karen, Peter, Christian, Morten
+**Target:** 11 agenter → 4 core agents
 
-**Status:** Pending skills creation
+### Agents Being Removed (7):
+1. ❌ monitor (Karl) → heartbeat skill
+2. ❌ researcher (Mette) → research skill
+3. ❌ verifier (Peter) → Anders workflow
+4. ❌ reviewer (Christian) → Anders workflow
+5. ❌ security (Bent) → security skill
+6. ❌ complexity-guardian (Karen) → vibe-check skill
+7. ❌ webmon (Morten) → dormant/unused
+
+### Agents Kept (4):
+1. ✅ main (James) - Coordinator
+2. ✅ orchestrator (Rene) - Builder
+3. ✅ communicator (Rikke) - Writer
+4. ✅ coordinator (Anders) - Analyst
+
+**Status:** 🔄 IN PROGRESS
+- Rene updating openclaw.json
+- Spawn permissions being updated
+- /compact workflow being added to AGENTS.md
 
 ---
 
