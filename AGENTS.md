@@ -10,6 +10,13 @@ This folder is home. Treat it that way.
 | [USER.md](./USER.md) | Who you're helping |
 | [TOOLS.md](./TOOLS.md) | Your local tool notes |
 
+## Context Loading (Lazy Loading)
+
+**Session Start:** Load only SOUL.md, USER.md, AGENTS.md index (~4k tokens). 
+**Context Budget:** Track "Xk/10k tokens" - see SOUL.md for full lazy loading rules.
+
+See [SOUL.md](./SOUL.md) for complete context loading rules.
+
 ## Agent Configurations
 
 | Agent | Role | File |
