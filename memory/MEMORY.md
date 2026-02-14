@@ -1,8 +1,22 @@
 # MEMORY.md — Index
 
-> Lightweight index, max 3k tokens. Drill down on demand.
+> **PURPOSE:** Curated long-term memory — distilled facts, not raw logs.
+> **SCOPE:** Critical info that survives for months/years: people, projects, decisions, lessons.
+> **FORMAT:** Dry, reference-style. Max 3k tokens. Drill down via linked files.
+> **SAFETY:** Compaction-safe — key facts repeated in daily files as backup.
+> 
+> **MEMORY STRATEGY:**
+> | Store in MEMORY.md | Store in daily files (YYYY-MM-DD.md) |
+> |-------------------|-------------------------------------|
+> | People profiles (permanent facts) | Raw events, conversations, actions |
+> | Project status/decisions | Session context, debugging |
+> | Critical lessons learned | Temporary notes, scratchpad |
+> | Agent fleet config | Task lists, temporary todos |
+> | Preferences (language, tools) | Event timestamps, outcomes |
+> 
 > **Cleanup:** Archive monthly via Bent (security) or /skills/security/memory-cleanup.sh
 > **Old entries:** See archive/[YYYY-MM]/ or rollback old MEMORY.md versions
+> **TTL:** Memory files auto-archived after 30 days
 
 ## Active Context
 <!-- 2-3 files always loaded at session start -->

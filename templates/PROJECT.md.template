@@ -27,6 +27,22 @@ git pull origin main
 [restart kommando]
 ```
 
+**Git repositories:**
+- Frontend: https://github.com/[org]/[projekt]-frontend (branch: [main/master])
+- Backend: https://github.com/[org]/[projekt]-backend (branch: [main/master])
+
+**Git workflow (MANDATORY efter hver deployment):**
+```bash
+# Efter deployment - ALTID commit + push til GitHub
+
+cd [projekt-path]
+git add -A
+git commit -m "beskrivelse af ændringer"
+git push origin [branch]
+```
+
+**VIGTIGT:** Deployment er IKKE færdig før Git push er successful!
+
 ### URLs
 - **Production:** https://[domain]
 - **API:** https://api.[domain] (hvis relevant)

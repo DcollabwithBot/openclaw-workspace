@@ -1,1 +1,14 @@
-{"lastChecks":{"git_status":1770987700,"proactive_scan":1739443800,"memory_maintenance":1739357400,"status":1771052580,"memory":1771049340,"todoist":1771049340,"brave_quota":1771046100,"fallback_monitor":1771049340}}
+{
+  "lastChecks": {
+    "status": 1771052580,
+    "memory": 1771049340,
+    "todoist": 1771049340,
+    "brave_quota": 1771046100,
+    "fallback_monitor": 1771049340,
+    "git_status": 1770987700,
+    "proactive_scan": 1771027398,
+    "memory_maintenance": 1771053120,
+    "todoist_review": 1739523780,
+    "followup": 1739523780
+  }
+}

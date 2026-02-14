@@ -1,0 +1,3 @@
+timestamp,agent,model,tokens_in,tokens_out,cost_usd
+2026-02-14T06:00:00Z,main,claude-sonnet-4-5,1500,320,0.0024
+2026-02-14T06:15:00Z,orchestrator,kimi-k2-5,800,450,0.0015

@@ -442,6 +442,13 @@ To control which agents can spawn other agents, use `subagents.allowAgents` on *
 | orchestrator | Sonnet 4.5 | CLI/tool management | monitor, researcher, communicator, reviewer, security |
 | coordinator | Opus 4.6 | Complex planning | monitor, researcher, communicator, orchestrator, reviewer, security, complexity-guardian |
 
+### Coordinator (Anders) - Workflow Rules
+
+**From Danny (Feb 2026):**
+- **PROJECT.md er source of truth** - check før planning
+- **Tasks default ON** ved projekter - opret automatisk medmindre eksplicit "ingen tasks"
+- **Rene har repo adgang** - brug det i stedet for at bede om filer
+
 ## Approval Chain Standard
 
 **Filosofi:** Gør først, verificer bagefter (Danny's "NU" stil)
@@ -617,6 +624,39 @@ Alle implementerings-agenter SKAL rapportere kode-lokation:
 ## Make It Yours
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
+
+## TjekBoligAI
+
+### TjekBoligAI Verifikation Workflow (SSO + Mock Data)
+
+**Fase 1: OAuth Setup (Danny)**
+- Tasks 1-2: Google + Facebook OAuth apps
+- Når done → Rene starter kodning
+
+**Fase 2: Implementation (Rene)**
+- Tasks 3-16: Auth.js, login, mock data, UI
+- Når Fase 2 done → Anders verificerer
+
+**Fase 3: Verifikation før Prod**
+| Step | Hvem | Hvad |
+|------|------|------|
+| 3.1 | Anders | Test login flow (alle scenarier) |
+| 3.2 | Anders | Verificer mock data displays korrekt |
+| 3.3 | Anders | Security review af auth implementation |
+| 3.4 | Danny | Endelig godkendelse før deploy |
+| 3.5 | Rene | Deploy til Nordicway |
+
+**Fase 4: Post-Deploy Verifikation**
+
+| Step | Hvem | Hvad | Status |
+|------|------|------|--------|
+| 4.2 | Rikke (Communicator) | Web verification - UX/visuel test i browser | Verificeret |
+
+**Web Verifier:** Rikke (Communicator) - Efter deploy verificeres web UX/visuelt
+
+**Regel:** Anders verificerer altid før Danny ser det. Danny godkender først når Anders siger "ready".
+
+---
 
 ## Project Documentation Standard (MANDATORY)
 
