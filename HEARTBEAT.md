@@ -143,3 +143,75 @@ When a session ends (before replying final message):
 - 🟢 OK → HEARTBEAT_OK
 
 **Update:** `lastChecks.followup`
+
+---
+
+## ✅ Phase 3 Automation Checks (No LLM)
+
+### 8. Secret Scan (every 24h)
+**Interval:** 86400 seconds
+**Cost:** $0 (pure bash/regex)
+**Purpose:** Detect accidentally committed API keys
+
+**Command:** `bash skills/security/secret-scan.sh`
+
+**Patterns checked:**
+- `sk-[a-zA-Z0-9]{20,}` - OpenAI/Anthropic keys
+- `ghp_[a-zA-Z0-9]{36}` - GitHub tokens
+- `AKIA[0-9A-Z]{16}` - AWS Access Keys
+- `ya29\.[a-zA-Z0-9_-]+` - Google OAuth
+- `Bearer\s+[a-zA-Z0-9_-]+` - Generic bearer tokens
+- `api[_-]?key\s*[=:]\s*...` - Generic API keys
+
+**Output:** JSON report with file:line matches
+**Alert:** Exit 1 if secrets found
+**Update:** `lastChecks.secret_scan`
+
+### 9. Context Check (every 24h)
+**Interval:** 86400 seconds
+**Cost:** $0 (pure bash)
+**Purpose:** Prevent token bloat from large .md files
+
+**Command:** `bash scripts/context-check.sh`
+
+**Threshold:** >20KB (~5k tokens)
+**Output:** List of oversized .md files with suggestions
+**Alert:** Exit 1 if any files exceed threshold
+**Update:** `lastChecks.context_check`
+
+### 10. Token Tracking (every 24h)
+**Interval:** 86400 seconds
+**Cost:** $0 (pure awk)
+**Purpose:** Track API costs and alert approaching limit
+
+**Command:** `bash scripts/token-tracker.sh`
+
+**Reads:** `memory/costs/YYYY-MM.csv`
+**Calculates:**
+- Daily usage (today)
+- Weekly usage (last 7 days)
+- Monthly cumulative
+- Tokens in/out totals
+
+**Limit:** $50/month
+**Warning:** $40/month
+**Alert:** Exit 1 if cost >$50 or >$40 warning threshold
+**Update:** `lastChecks.token_tracking`
+
+### 11. File Size Check (every 7 days)
+**Interval:** 604800 seconds
+**Cost:** $0 (pure find/stat)
+**Purpose:** Detect workspace bloat early
+
+**Command:** `bash scripts/file-size-check.sh`
+
+**Threshold:** >100KB
+**Excludes:** `.git/`, `node_modules/`, `__pycache__/`
+**Output:** File list with suggestions per type:
+- .md → Split into sections
+- .json → Archive by month
+- .log → Rotate with logrotate
+- Other → Review necessity
+
+**Alert:** Exit 1 if files >100KB found
+**Update:** `lastChecks.file_size_check`
