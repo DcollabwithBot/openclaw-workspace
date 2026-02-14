@@ -1,0 +1,23 @@
+{
+  "patterns": [
+    {
+      "description": "Deployment credential handling needed",
+      "target": "PROJECT.md",
+      "section": "requirements",
+      "regex": "deployment.*credential",
+      "source": "/root/.openclaw/workspace/memory/2026-02-13.md",
+      "found": "2026-02-13",
+      "applied": false
+    },
+    {
+      "description": "Danish 'sidste 10%' workflow pattern detected",
+      "target": "AGENTS.md",
+      "section": "workflows",
+      "regex": "sidste.*10%",
+      "source": "/root/.openclaw/workspace/memory/2026-02-13.md",
+      "found": "2026-02-13",
+      "applied": true
+    }
+  ],
+  "lastScan": "2026-02-14T18:45:36Z"
+}

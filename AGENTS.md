@@ -65,3 +65,14 @@ Every "that's not what I wanted" → update docs:
 ---
 
 *Agent-specific details live in `agents/` folder.*
+
+## Learning
+
+Auto-detected patterns from memory analysis:
+
+<!-- Auto-learned pattern: 2026-02-14 -->
+- **Pattern**: Danish 'sidste 10%' workflow pattern detected
+- **Section**: workflows
+- **Source**: /root/.openclaw/workspace/memory/2026-02-13.md
+- **Regex**: `sidste.*10%`
+
